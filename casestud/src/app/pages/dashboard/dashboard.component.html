@@ -1,0 +1,50 @@
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>OnePlus 5 (Slate Gray 6GB RAM + 64GB memory)</h1>
+    <p>
+      Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+    </p>
+    <button>Buy Now!</button>
+  </div>
+
+  <img src="assets/img/p4.png" />
+</div>
+
+<div class="featured">
+
+  <!-- LEFT SIDE BUTTONS -->
+  <div class="left">
+    <button
+      *ngFor="let c of categories"
+      (click)="selectCategory(c)"
+      [class.active]="activeCategory === c"
+    >
+      {{ c }}
+    </button>
+  </div>
+
+  <!-- RIGHT SIDE CONTENT -->
+  <div class="right">
+    <div class="text">
+      <h2>{{ activeCategory }}</h2>
+      <p>Lorem ipsum dolor sit amet...</p>
+      <button class="read-btn">Read More</button>
+    </div>
+
+    <img [src]="selectedImage" />
+  </div>
+
+</div>
+
+<!-- PRODUCTS -->
+
+
+<div class="products">
+  <div class="card" *ngFor="let p of products">
+    <img [src]="p.image" />
+    <h3>{{ p.name }}</h3>
+    <p class="price">₹{{ p.price }}</p>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </div>
+</div>

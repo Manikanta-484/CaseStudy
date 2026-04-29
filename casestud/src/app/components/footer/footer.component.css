@@ -1,0 +1,18 @@
+.footer {
+  width: 100%;
+  background: #eee;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: auto; /* 🔥 important */
+}
+
+.footer a {
+  color: #1e88a8;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+<div class="products-container">
+  <div class="card" *ngFor="let p of products">
+
+    <div class="image">
+      <img [src]="p.image" />
+    </div>
+
+    <div class="content">
+      <div class="title-price">
+        <h3>{{ p.name }}</h3>
+        <span class="price">${{ p.price }}</span>
+      </div>
+
+      <p class="desc">{{ p.description }}</p>
+
+      <div class="rating">
+        <span class="stars">
+          <span *ngFor="let star of getStars(p.rating)">★</span>
+        </span>
+        <span class="reviews">{{ p.reviews }} Reviews</span>
+      </div>
+
+      <button>Add to Cart</button>
+    </div>
+
+  </div>
+</div>

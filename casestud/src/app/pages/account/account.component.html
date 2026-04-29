@@ -1,0 +1,70 @@
+<div class="container">
+
+  <h2>Personal Information</h2>
+
+  <form>
+
+    <label>Name</label>
+    <input [(ngModel)]="user.name" name="name" placeholder="Enter name" />
+
+    <label>Email address</label>
+    <input [(ngModel)]="user.email" name="email" placeholder="Enter email" />
+    <small>We'll never share your email with anyone else.</small>
+
+    <label>Mobile Number</label>
+    <input [(ngModel)]="user.mobile" name="mobile" placeholder="Enter mobile number" />
+
+    <label>Address</label>
+    <input [(ngModel)]="user.address1" name="address1" placeholder="Enter address" />
+
+    <label>Address 2</label>
+    <input [(ngModel)]="user.address2" name="address2" placeholder="Apartment, studio, or floor" />
+
+    <!-- ROW -->
+    <div class="row">
+
+      <div class="form-group">
+        <label>City</label>
+        <input [(ngModel)]="user.city" name="city" placeholder="City" />
+      </div>
+
+      <div class="form-group">
+        <label>State</label>
+        <select [(ngModel)]="user.state" name="state">
+          <option value="" disabled>--select--</option>
+          <option>Karnataka</option>
+          <option>Maharashtra</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Zip</label>
+        <input [(ngModel)]="user.zip" name="zip" placeholder="Zip" />
+      </div>
+
+    </div>
+
+    <button type="button" (click)="save()">Save</button>
+
+  </form>
+
+  <!-- FAQ SECTION -->
+  <div class="faq">
+
+    <h3>FAQs</h3>
+
+    <p><b>What happens when I update my email address (or mobile number)?</b></p>
+    <p>Your login email id (or mobile number) changes. You’ll receive all communication on updated details.</p>
+
+    <p><b>When will my account be updated with new email (or mobile)?</b></p>
+    <p>After verification and saving changes.</p>
+
+    <p><b>What happens to my existing account?</b></p>
+    <p>Your account remains fully functional with order history and saved info.</p>
+
+    <p><b>Does seller account get affected?</b></p>
+    <p>Yes, changes reflect in seller account as well.</p>
+
+  </div>
+
+</div>
